@@ -1,5 +1,5 @@
 import { hasUpgrade, simpleUpgradeBoost, simpleUpgradeEffect, upgradeEffect } from "./upgrades";
-
+//1
 export const CURRENCIES = {
     mass: {
         name: "普通质量",
