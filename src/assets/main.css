@@ -1,0 +1,220 @@
+@font-face {
+  font-family: MainFont;
+  src: url('Lunasima-Regular.ttf');
+}
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+	text-align: center;
+}
+
+body {
+  color: white;
+  background-color: #121212;
+  overflow-x: hidden;
+  font-size: 14px;
+  margin: 5px;
+  user-select: none;
+}
+
+table, tr {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  display: inline;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+h2 {
+  display: inline;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+h3 {
+  display: inline;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h4 {
+  display: inline;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #0000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.line {
+	content: '';
+	display: block;
+	width: calc(100% - 10px);
+	margin: 6px auto;
+	height: 0px;
+	border-top: solid 2px white;
+}
+
+.sub-line {
+	content: '';
+	display: block;
+	width: calc(100% - 2px);
+	margin: 6px auto;
+	height: 0px;
+	border-top: solid 2px #fff2;
+}
+
+.o-primary-btn {
+  margin: 2px;
+
+  font-size: 12px;
+  border: outset 2px white;
+  border-radius: 5px;
+  background-color: #4444;
+  padding: 4px 8px;
+  color: white;
+  
+  cursor: pointer;
+
+  transition-property: background-color, border, color;
+  transition-duration: 0.25s;
+}
+
+.no-active {
+  cursor: default;
+}
+
+.o-primary-btn:not(.o-primary-btn--disabled,.o-primary-btn--bought,.o-rank-reward,.o-mlt-milestone,.no-active):hover {
+  background-color: #8884;
+}
+
+.o-primary-btn:not(.o-rank-reward,.o-mlt-milestone,.no-active):active {
+  border-style: inset;
+}
+
+.o-primary-btn.o-primary-btn--disabled {
+  border-color: red;
+  background-color: #4004;
+
+  cursor: default;
+}
+
+.o-primary-btn.o-primary-btn--bought {
+  border-color: lime;
+  background-color: #0404;
+
+  cursor: default;
+}
+
+.c-table-center {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.o-rank-reward {
+  padding: 15px 5px 5px 5px;
+  width: 200px;
+  min-height: 150px;
+  font-size: 10px;
+
+  cursor: default;
+
+  position: relative;
+}
+
+.o-mlt-milestone {
+  padding: 15px 5px 5px 5px;
+  width: 200px;
+  min-height: 200px;
+  font-size: 10px;
+
+  cursor: default;
+
+  position: relative;
+}
+
+#notify {
+  position: fixed;
+  top: 0px; right: 0px;
+  z-index: 1;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  flex-direction: column-reverse;
+  height: 100%;
+  overflow-y: hidden;
+  pointer-events: none;
+}
+
+.notify-ctn {
+  position: relative;
+  max-width: 360px;
+  margin: 3px;
+  padding: 3px;
+  color: white;
+  background-color: #444;
+  border: outset 2px #666;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: justify;
+  transition: opacity 1s;
+  flex: 0 0 auto;
+}
+
+.notify-ctn > img.notify {
+  float: right;
+  width: 64px; height: 64px;
+  margin-left: 3px;
+  background-color: #666;
+  border: outset 2px #666;
+  border-radius: 5px;
+}
+
+.o-achievement--cell, .o-achievement--cell-hidden {
+  position: relative;
+  background-color: #a3a3a3;
+  border: outset 2px red;
+  border-radius: 10px;
+}
+
+.o-achievement--cell {
+  background-image: url('../assets/images/achievements.png');
+}
+.o-achievement--cell-hidden {
+  background-color: #555;
+  border-color: #888;
+  background-image: url('../assets/images/achhidden.png');
+  background-size: 125px;
+}
+
+.o-achievement--cell.unlocked {
+  background-color: #5ac467;
+  border-color: lime;
+}
+
+.o-currency--mlt {
+  background: repeating-linear-gradient(90deg, #FF7FED, #7F92FF 40px, #FF7FED 80px);
+  background: -moz-repeating-linear-gradient(left, #FF7FED, #7F92FF 40px, #FF7FED 80px);
+  background: -webkit-repeating-linear-gradient(left, #FF7FED, #7F92FF 40px, #FF7FED 80px);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.small-text {
+  font-size: 10px;
+  color: #aaa;
+}
